@@ -1,17 +1,23 @@
 from tkinter import *
 
+
 root = Tk()
 
 #Define OPEN function to open 2nd window 
 
 def open():
-	global myLabel
-	top = top-level()
-	top.title('Final Report')
-	myLabel = Label(top, text="During the semester")
-	my_Label(row=1, column=1).pack()
+	global dateLabeltwo
+	top = Toplevel()
+	top.title('My Second Window')
+	
+##simple  get command needs to be added
 
 
+
+
+#add a continue button 
+btn = Button(root, text = "Open Second Window", command = open)
+btn.grid(row=11, column=4, columnspan=3, padx=10, pady=10)
 
 
 
@@ -54,17 +60,20 @@ instructorEntry.grid(row=2, column=4, columnspan=3, padx=10, pady=10)
 
 
 
-
 #course name entry box
 
 courseEntry = Entry(root, width=35, borderwidth=5)
 courseEntry.grid(row=3, column=4, columnspan=3, padx=10, pady=10)
+text = courseEntry.get()
+
 
 #date entry box
 
 
 dateEntry = Entry(root, width=35, borderwidth=5)
 dateEntry.grid(row=5, column=5, columnspan=3, padx=10, pady=10)
+text = dateEntry.get()
+
  
 
 
@@ -73,16 +82,19 @@ dateEntry.grid(row=5, column=5, columnspan=3, padx=10, pady=10)
 
 studentnameEntryone = Entry(root, width=35, borderwidth=5)
 studentnameEntryone.grid(row=8, column=4, columnspan=3, padx=10, pady=10)
+text = studentnameEntryone.get()
+
 
 studentnameEntrytwo = Entry(root, width=35, borderwidth=5)
 studentnameEntrytwo.grid(row=9, column=4, columnspan=3, padx=10, pady=10)
+text = studentnameEntrytwo.get()
+
 
 studentnameEntrythree = Entry(root, width=35, borderwidth=5)
 studentnameEntrythree.grid(row=10, column=4, columnspan=3, padx=10, pady=10)
+text = studentnameEntrythree.get()
 
-#add a continue button 
-btn = Button(root, text = "Open Second Window", command = open)
-btn.grid(row=11, column=4, columnspan=3, padx=10, pady=10)
+
 
 
 
